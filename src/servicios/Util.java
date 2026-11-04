@@ -162,6 +162,7 @@ public class Util {
         // ===================================================================
         // TRAMPA PEDAGÓGICA: Forzar el Buffer Underflow
         // ===================================================================
+
         try {
             // Carga artificial de CPU (cálculo pesado innecesario)
             double dummy = 0;
@@ -174,5 +175,7 @@ public class Util {
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         }
+
+
     }
 }

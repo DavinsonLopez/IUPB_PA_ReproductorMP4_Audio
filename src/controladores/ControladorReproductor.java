@@ -107,6 +107,8 @@ public class ControladorReproductor {
                         lineaAudio.start();
                     }
 
+                    Util.aplicarEfectoEcoSincrono(audioData.samples(), audioData.numChannels());
+
                     // Convertir los buffers de JavaCV a un arreglo de bytes PCM estándar de 16 bits
                     byte[] bytesAudio = Util.convertirMuestrasABytesPCM(audioData.samples(), canales);
                     if (bytesAudio != null && bytesAudio.length > 0) {
